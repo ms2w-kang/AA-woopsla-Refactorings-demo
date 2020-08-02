@@ -1,7 +1,7 @@
 package coupling07.facade;
 
 public class FloorDoor implements IDoor {
-    private int floor;
+    private final int floor;
 
     public FloorDoor(int floor) {
         this.floor = floor;

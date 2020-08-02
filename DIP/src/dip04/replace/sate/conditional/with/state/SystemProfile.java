@@ -1,6 +1,4 @@
 package dip04.replace.sate.conditional.with.state;
 
-public class SystemProfile
-{
-
+public class SystemProfile {
 }

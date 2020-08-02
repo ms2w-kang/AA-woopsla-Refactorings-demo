@@ -1,14 +1,12 @@
 package srp06.move.accumulation.to.collecting.parameter;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TagNodeTest
-{
+public class TagNodeTest {
 	@Test
-	public void testToString() throws Exception
-	{
+	public void testToString() throws Exception {
 		TagNode node = new TagNode("html", "", "");
 		TagNode node2 = new TagNode("head", "", "");
 		TagNode node3 = new TagNode("dummy", "width=10", "Hello");
@@ -16,10 +14,8 @@ public class TagNodeTest
 		/*
 		 * <html >
 		 *     <head >
-		 *     	<style >
-		 *         <dummy width=10>Hello
-		 *         </dummy>
-		 *     	</style>
+		 *     	    <style ></style>
+		 *          <dummy width=10>Hello</dummy>
 		 *     </head>
 		 * </html>
 		 */

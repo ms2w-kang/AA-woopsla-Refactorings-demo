@@ -2,22 +2,23 @@ package simple.factory;
 
 public class ToysFactory {
     public Toy produceToy(String name) {
-        Toy toy = null;
+        Toy toy;
 
-        if (name.equals("Car")) {
-            toy = new Car();
-        } else if (name.equals("Helicopter")) {
-            toy = new Helicopter();
-        } else {
-            toy = new NullToy();
+        switch (name) {
+            case "Car":
+                toy = new Car();
+                break;
+            case "Helicopter":
+                toy = new Helicopter();
+                break;
+            case "Jumping Frog":
+                toy = new JumpingFrog();
+                break;
+            default:
+                toy = new NullToy();
+                break;
         }
 
-        //region @Frog
-//		else if (name.equals("Jumping Frog"))
-//		{
-//			toy = new JumpingFrog();
-//		}
-        //endregion
 
         toy.prepare();
         toy.packaging();

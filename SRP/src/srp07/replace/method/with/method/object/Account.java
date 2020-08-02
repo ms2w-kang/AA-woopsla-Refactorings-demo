@@ -1,14 +1,17 @@
-/*
- * SMELL: Long Method
- *   -- You have a long method in which the local variables 
- *      are so intertwined that you cannot apply "Extract Method".
- * 
- * TREATMENT: Replace Method with Method Object
- *   -- Turn the method into its own object so that all the local 
- *      variables become fields on that object. 
- *
- */
 package srp07.replace.method.with.method.object;
+
+/**
+ * <h3>SMELL: Long Method</h3>
+ * <ul>
+ *   <li> You have a long method in which the local variables
+ *      are so intertwined that you cannot apply "Extract Method".
+ * </ul>
+ * <h3>TREATMENT: Replace Method with Method Object</h3>
+ * <ul>
+ *   <li> Turn the method into its own object so that all the local
+ *      variables become fields on that object.
+ * </ul>
+ */
 
 public class Account {
     // ... Select function body in {} to convert to method object

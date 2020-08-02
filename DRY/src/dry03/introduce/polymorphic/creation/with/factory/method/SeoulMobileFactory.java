@@ -1,12 +1,17 @@
-/*
-   Symptom: Classes in a hierarchy implement a method similarly
-            except for an object creation step.
-
-   Treatment: Make a single superclass version produceMobile the method that
-            calls a Factory Method to handle the instantiation.
- */
-
 package dry03.introduce.polymorphic.creation.with.factory.method;
+
+/**
+ * <h3>Symptom</h3>
+ * <ul>
+ * <li>Classes in a hierarchy implement a method similarly except for
+ * an object creation step.
+ * </ul>
+ * <h3>Treatment</h3>
+ * <ul>
+ * <li>Make a single superclass version produceMobile the method that
+ * calls a Factory Method to handle the instantiation.
+ * </ul>
+ */
 
 /*
  * Produces "Thunder" and "Bolt"

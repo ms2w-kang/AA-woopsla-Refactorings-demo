@@ -6,8 +6,6 @@ DROP TABLE ProductDescription;
 DROP TABLE Sale;
 
 
-
-
 /* Create Tables */
 
 CREATE TABLE LineItem

@@ -9,7 +9,7 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 class Clock {
-	private int interval;
+	private final int interval;
 	
 	public Clock(int interval) {
 		this.interval = interval;
@@ -49,7 +49,6 @@ class Clock {
 }
 
 class Counter {
-	
 	private int value;
 	private UI ui = null;
 	
@@ -77,9 +76,8 @@ class Counter {
 
 // region Cycler
 class Cycler {
-	
+	private final int base;
 	private int value;
-	private int base;
 	private UI ui = null;
 	
 	public Cycler(int base) {
@@ -108,16 +106,13 @@ class Cycler {
 
 @SuppressWarnings("serial")
 class UI extends JFrame {
-	private String title;
-	private JPanel contentPane;
-	private JTextField text;
+	private final JTextField text;
 	
 	UI(String title) {
-		this.title = title;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 150, 80);
-		
-		contentPane = new JPanel();
+
+		JPanel contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout());
 		setContentPane(contentPane);

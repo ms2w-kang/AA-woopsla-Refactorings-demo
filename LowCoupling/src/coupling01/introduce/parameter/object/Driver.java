@@ -1,21 +1,25 @@
-/*
- * SMELL: Data Clump
- *   -- Your methods contain a repeating group of parameters.
- * 
- * TREATMENT: Introduce Parameter Object
- *   -- Replace these parameters with an object.
- */
 package coupling01.introduce.parameter.object;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
+
+/**
+ * <h3>SMELL: Data Clump</h3>
+ * <ul>
+ *   <li> Your methods contain a repeating group of parameters.
+ * </ul>
+ * <h3>TREATMENT: Introduce Parameter Object</h3>
+ * <ul>
+ *   <li> Replace these parameters with an object.
+ * </ul>
+ */
 
 class Account {
 	// ...
-	private List<Transaction> transactions = new ArrayList<>();
+	private final List<Transaction> transactions = new ArrayList<>();
 
-	public double getFlowBetween(Date start, Date end) {
+	public double getFlowBetween(LocalDate start, LocalDate end) {
 		double result = 0;
 
 		for (Transaction each : transactions) {
@@ -33,15 +37,15 @@ class Account {
 }
 
 class Transaction {
-	private Date chargeDate;
-	private double value;
+	private final LocalDate chargeDate;
+	private final double value;
 
-	public Transaction(double value, Date chargeDate) {
+	public Transaction(double value, LocalDate chargeDate) {
 		this.value = value;
 		this.chargeDate = chargeDate;
 	}
 
-	public Date getDate() {
+	public LocalDate getDate() {
 		return chargeDate;
 	}
 

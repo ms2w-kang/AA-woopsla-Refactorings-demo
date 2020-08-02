@@ -1,17 +1,20 @@
-/*
- * SMELL: Control Couple
- *   -- A method is split into parts, each of which is run
- *      depending on the value of a parameter.
- *
- * TREATMENT: Replace Parameter with Explicit Method
- *   -- Extract the individual parts of the method into their
- *      own methods and call them instead of the original method.
- */
-
 package coupling04.replace.parameter.with.explicit.method;
 
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * <h3>SMELL: Control Couple</h3>
+ * <ul>
+ *   <li> A method is split into parts, each of which is run
+ *      depending on the value of a parameter.
+ * </ul>
+ * <h3>TREATMENT: Replace Parameter with Explicit Method</h3>
+ * <ul>
+ *   <li> Extract the individual parts of the method into their
+ *      own methods and call them instead of the original method.
+ * </ul>
+ */
 
 class Item {
 }
@@ -54,8 +57,6 @@ public class Driver {
     }
 }
 
-
-
 /*
- * Other possibility? (kim) -- Strategy?
+ * Other possibility?
  */

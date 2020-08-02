@@ -1,7 +1,7 @@
 package factory.method;
 
 public abstract class Motor {
-    private Door door;
+    private final Door door;
     private MotorStatus motorStatus;
 
     public Motor(Door door) {

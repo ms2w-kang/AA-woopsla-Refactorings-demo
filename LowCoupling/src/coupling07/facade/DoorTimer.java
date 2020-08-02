@@ -1,7 +1,7 @@
 package coupling07.facade;
 
 public class DoorTimer {
-    private Timer timer = new Timer();
+    private final Timer timer = new Timer();
 
     public void start(ElevatorController controller) {
         DoorTimerTask task = new DoorTimerTask(controller);

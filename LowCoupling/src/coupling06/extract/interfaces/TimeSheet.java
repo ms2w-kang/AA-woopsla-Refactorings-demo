@@ -1,12 +1,16 @@
-/*
- * SMELL: Fat Interface
- *   -- Several clients use the same subset of a class's interface, 
- *      or two classes have part of their interfaces in common.
- * 
- * TREATMENT: Extract Interface
- *   -- Extract the subset into an interface.
- */
 package coupling06.extract.interfaces;
+
+/**
+ * <h3>SMELL: Fat Interface</h3>
+ * <ul>
+ *   <li> Several clients use the same subset of a class's interface,
+ *      or two classes have part of their interfaces in common.
+ * </ul>
+ * <h3>TREATMENT: Extract Interface</h3>
+ * <ul>
+ *   <li> Extract the subset into an interface.
+ * </ul>
+ */
 
 public class TimeSheet {
     // ...

@@ -1,13 +1,17 @@
-/*
- * SMELL: Method Chain
- *   -- The client gets object B from a field or method of object А.
- *      Then the client calls a method of object B.
- *
- * TREATMENT: Hide Delegate (Tell/Don't Ask, Law of Demeter, Law of Least knowledge)
- *   -- Create a new method in class A that delegates the call to object B.
- *      Now the client does not know about, or depend on, class B.
- */
 package coupling05.hide.delegate;
+
+/**
+ * <h3>SMELL: Method Chain</h3>
+ * <ul>
+ *   <li> The client gets object B from a field or method of object А.
+ *      Then the client calls a method of object B.
+ * </ul>
+ * <h3>TREATMENT: Hide Delegate (Tell/Don't Ask, Law of Demeter, Law of Least knowledge)</h3>
+ *  <ul>
+ *   <li> Create a new method in class A that delegates the call to object B.
+ *      Now the client does not know about, or depend on, class B.
+ * </ul>
+ */
 
 class Person {
     private Department department;

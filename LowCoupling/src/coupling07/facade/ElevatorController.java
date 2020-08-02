@@ -5,13 +5,13 @@ import java.util.List;
 
 public class ElevatorController {
     private int curFloor = 1;
-    private List<Integer> destinations = new ArrayList<>();
+    private final List<Integer> destinations = new ArrayList<>();
 
-    private IMotor motor;
+    private final IMotor motor;
     private boolean isMoving = false;
-    private ElevatorDoor elevatorDoor;
-    private List<FloorDoor> floorDoors;
-    private DoorTimer doorTimer;
+    private final ElevatorDoor elevatorDoor;
+    private final List<FloorDoor> floorDoors;
+    private final DoorTimer doorTimer;
 
     public ElevatorController(IMotor motor, ElevatorDoor elevatorDoor,
                               List<FloorDoor> floorDoors, DoorTimer doorTimer) {
@@ -24,7 +24,7 @@ public class ElevatorController {
 
     public void goTo(int destination) {
         if (!destinations.contains(destination)) destinations.add(destination);
-        if (isMoving == false) {
+        if (!isMoving) {
             int direction = determineMovingDirection();
             if (direction != 0) {
                 motor.move(direction);
@@ -42,7 +42,7 @@ public class ElevatorController {
             elevatorDoor.open();
             floorDoors.get(curFloor - 1).open();
             doorTimer.start(this);
-            destinations.remove(new Integer(floor));
+            destinations.remove(Integer.valueOf(floor));
         }
     }
 
@@ -51,6 +51,7 @@ public class ElevatorController {
     }
 
     public void doorTimeout() {
+        if (isMoving) return;
         elevatorDoor.close();
         floorDoors.get(curFloor - 1).close();
         doorTimer.stop();
@@ -66,20 +67,6 @@ public class ElevatorController {
         int destination = destinations.get(0);
         if (destination > curFloor) return 1;
         return -1;
-    }
-
-    public void openDoor() {
-        if (isMoving) return;
-        elevatorDoor.open();
-        floorDoors.get(curFloor - 1).open();
-        doorTimer.start(this);
-    }
-
-    public void closeDoor() {
-        if (isMoving) return;
-        elevatorDoor.close();
-        floorDoors.get(curFloor - 1).close();
-        doorTimer.stop();
     }
 }
 

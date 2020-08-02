@@ -1,16 +1,20 @@
-/*
- * SMELL: Long Method or Code Duplicate Across Methods
- *   -- You have a code fragment that can be grouped together.
- *   -- You have the same or similar codes.
- * 
- * TREATMENT: Extract Method
- *   -- Move this code to a separate new method (or function) 
- *      and replace the old code with a call to the method.
- */
 package dry01.extract.method;
 
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * <h3>SMELL: Long Method or Code Duplicate Across Methods</h3>
+ * <ul>
+ *   <li> You have a code fragment that can be grouped together.
+ *   <li> You have the same or similar codes.
+ * </ul>
+ * <h3>TREATMENT: Extract Method</h3>
+ * <ul>
+ *   <li> Move this code to a separate new method (or function)
+ *      and replace the old code with a call to the method.
+ * </ul>
+ */
 
 public class Customer {
 	

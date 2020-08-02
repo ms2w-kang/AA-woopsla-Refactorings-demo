@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="DIP/src"/>
+	<classpathentry kind="src" path="DRY/src"/>
+	<classpathentry kind="src" path="LowCoupling/src"/>
+	<classpathentry kind="src" path="SCP/src"/>
+	<classpathentry kind="src" path="SRP/src"/>
+	<classpathentry kind="lib" path="lib/h2-1.4.200.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,13 +1,17 @@
-/*
- * SMELL: Similar Codes among Methods
- *   -- Several methods do similar things but with different values
- * 
- * TREATMENT: Parameterize Method
- *   -- Create one method that uses a parameter for the different values
- */
 package dry02.parameterize.method;
 
 import java.util.List;
+
+/**
+ * <h3>SMELL: Similar Codes among Methods</h3>
+ * <ul>
+ *   <li> Several methods do similar things but with different values
+ * </ul>
+ * <h3>TREATMENT: Parameterize Method</h3>
+ * <ul>
+ *   <li> Create one method that uses a parameter for the different values
+ * </ul>
+ */
 
 class Client { }
 

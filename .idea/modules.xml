@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DIP/DIP.iml" filepath="$PROJECT_DIR$/DIP/DIP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DRY/DRY.iml" filepath="$PROJECT_DIR$/DRY/DRY.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LowCoupling/LowCoupling.iml" filepath="$PROJECT_DIR$/LowCoupling/LowCoupling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Refactorings-demo.iml" filepath="$PROJECT_DIR$/Refactorings-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SCP/SCP.iml" filepath="$PROJECT_DIR$/SCP/SCP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SRP/SRP.iml" filepath="$PROJECT_DIR$/SRP/SRP.iml" />
+    </modules>
+  </component>
+</project>

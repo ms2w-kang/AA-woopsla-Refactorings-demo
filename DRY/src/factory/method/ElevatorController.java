@@ -1,9 +1,9 @@
 package factory.method;
 
 public class ElevatorController {
-    private int id;
+    private final int id;
+    private final Motor motor;
     private int curFloor = 1;
-    private Motor motor;
 
     public ElevatorController(int id, Motor motor) {
         this.id = id;
@@ -12,15 +12,17 @@ public class ElevatorController {
 
     public void gotoFloor(int destination) {
         if (destination == curFloor) return;
-        Direction direction;
-        if (destination > curFloor) direction = Direction.UP;
-        else direction = Direction.DOWN;
+        Direction direction = getDirection(destination);
         motor.move(direction);
         System.out.print("Elevator [" + id + "] Floor: " + curFloor);
+
         curFloor = destination;
-        System.out.println(" ==> " + curFloor + " with " +
-            motor.getClass().getSimpleName());
+        System.out.println(" ==> " + curFloor + " with " + motor.getClass().getSimpleName());
         motor.stop();
+    }
+
+    private Direction getDirection(int destination) {
+        return destination > curFloor ? Direction.UP : Direction.DOWN;
     }
 }
 

@@ -3,7 +3,7 @@ package coupling07.facade;
 import java.util.TimerTask;
 
 public class DoorTimerTask extends TimerTask {
-    private ElevatorController controller;
+    private final ElevatorController controller;
 
     public DoorTimerTask(ElevatorController controller) {
         this.controller = controller;

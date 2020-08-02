@@ -1,13 +1,17 @@
-/*
- * SMELL: Long Method
- *   -- You can’t rapidly understand a method’s logic. 
- *   -- It consists of a number of concrete logics.
- * 
- * TREATMENT: Compose Method
- *   -- Transform the logic into a small number of 
- *      intention-revealing steps at the same level of detail.
- */
 package srp03.compose.method;
+
+/**
+ * <h3>SMELL: Long Method</h3>
+ * <ul>
+ *   <li> You can’t rapidly understand a method’s logic.
+ *   <li> It consists of a number of concrete logics.
+ * </ul>
+ * <h3>TREATMENT: Compose Method</h3>
+ * <ul>
+ *   <li> Transform the logic into a small number of
+ *      intention-revealing steps at the same level of detail.
+ * </ul>
+ */
 
 public class List<T> {
     private boolean readOnly = false;
@@ -27,8 +31,7 @@ public class List<T> {
             if (newSize > elements.length) { // grow array if capacity exceeds
                 @SuppressWarnings("unchecked")
                 T[] newElements = (T[]) new Object[elements.length + 10];
-                for (int i = 0; i < size; i++)
-                    newElements[i] = elements[i];
+                if (size >= 0) System.arraycopy(elements, 0, newElements, 0, size);
                 elements = newElements;
             }
 
